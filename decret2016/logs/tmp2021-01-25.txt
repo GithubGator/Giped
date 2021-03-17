@@ -1,0 +1,2 @@
+25-01-2021 17:48:20 : Execution deplacement :mv /home/imports_dept/cg13-CD13_2020_ONED_anonymise.XML /home/imports_dept/Backup/cg13-CD13_2020_ONED_anonymise.XML
+25-01-2021 17:48:29 : Execution deplacement :mv /home/imports_dept/cg15-ONED2020-12-18.xml /home/imports_dept/Backup/cg15-ONED2020-12-18.xml

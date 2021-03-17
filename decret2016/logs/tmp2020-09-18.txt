@@ -1,0 +1,2 @@
+18-09-2020 12:27:06 : Execution deplacement :mv /home/imports_dept/CG13-ONED.xml /home/imports_dept/Backup/CG13-ONED.xml
+18-09-2020 12:30:44 : Execution deplacement :mv /home/imports_dept/CG13-ONED.xml /home/imports_dept/Backup/CG13-ONED.xml

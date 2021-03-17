@@ -1,0 +1,1 @@
+05-01-2021 16:18:18 : Execution deplacement :mv /home/imports_dept/cg38-ONED-038-20201215.XML /home/imports_dept/Backup/cg38-ONED-038-20201215.XML

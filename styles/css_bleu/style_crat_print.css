@@ -1,0 +1,76 @@
+@page portrait {
+
+size: portrait;
+margin-top: .5cm;
+
+margin-bottom: .7cm;
+
+}
+
+.precision{
+	color:red;
+	display: inline;
+	font-style: italic;
+	font-size: 0.8em;
+}
+
+.toolbar{
+	
+		display:none;
+}
+.visa{
+	
+		display:none;
+}
+
+body {
+	  page:portrait;
+	 /* font-size: 1.1em;
+	  line-height: 1.2em;
+	  */
+}
+
+.sautPage{
+ page-break-before:always;		
+}
+
+#formulaire{
+padding-bottom: 24px;
+}
+
+ #formulaire input {
+   height: 20px; 
+   border: 1px solid black;
+
+} 
+#nomEval{
+	/* On aère le texte imprimé */
+	margin-bottom: 40px; 
+	margin-bottom: 20px;	
+}
+
+#synthese{
+ height : 400px;	
+}
+#nomenclature{
+  font-size: 0.9em;	
+  line-height: 1em;
+}
+
+div#print-footer {
+	
+	width:100%;
+	display: block; 
+	position: fixed; 
+	bottom: 0px;
+
+	text-align: center; 
+	font-size: 0.8em; 
+	font-family: arial, helvetica, sans-serif;
+}
+div#pied-page{
+	width:60%;
+	border: 1px solid #000000;
+	background-color: #EFEFEF;	
+	margin:auto; 
+}

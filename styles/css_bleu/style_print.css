@@ -1,0 +1,34 @@
+
+#top {
+	  display: none; 
+}
+
+#navigation {
+	  display: none; 
+}
+
+#horloge {
+	  display: none; 
+}
+
+#fiche_appel {
+	page-break-before: auto;
+}
+#enfant {
+	page-break-before: auto;
+}
+#auteur {
+	page-break-before: auto;
+}
+#danger {
+	page-break-before: auto;
+}
+#facteurs {
+	page-break-before: auto;
+}
+#appelant {
+	page-break-before: auto;
+}
+#rapport {
+	page-break-before: auto;
+}

@@ -1,0 +1,353 @@
+
+html, body {
+
+	  margin: 0;
+
+	  padding: 0; 
+
+}
+
+
+
+body {
+
+	  background: white;
+
+	  font-family: arial, helvetica, sans-serif;
+
+	  font-size: .8em;
+
+	  line-height: 1.2em;
+
+	  color: black; 
+
+}
+
+
+
+/* Presentation CRAT */
+
+
+
+#formulaire {
+
+	  display: block;
+
+	  width: 90%;
+
+	  margin-left: auto;
+
+	  margin-right: auto; 
+
+}
+
+
+
+.titre-crat {
+
+	  display: block;
+
+	  width: 30%;
+
+	  margin: 5px auto 5px auto;
+
+	  padding: 10px;
+
+	  vertical-align: middle;
+
+	  text-align: center;
+
+	  font-size: 1.1em;
+
+	  color: #FFF;
+
+	  font-weight: bold;
+
+	  background: #336699; 
+
+}
+
+
+
+.etat {
+
+	  display: block;
+
+	  width: auto;
+
+	  margin: 5px auto 5px auto;
+
+	  text-align: center;
+
+	  font-size: 1em;
+
+	  color: black;
+
+	  font-weight: bold; 
+
+}
+
+
+
+.titre {
+
+	  display: block;
+
+	  margin-top: 10px;
+
+	  padding-top: 4px;
+
+	  padding-left: 8px;
+
+	  padding-bottom: 4px;
+
+	  vertical-align: middle;
+
+	  font-size: 1.1em;
+
+	  background: #336699;
+
+	  color: #FFF;
+
+	  font-weight: bold;
+
+	  white-space: nowrap; 
+
+}
+
+
+
+.paragraphe {
+
+	  page-break-inside: avoid;
+
+	  page-break-before: auto;
+
+	  orphans: 3;
+
+	  widows: 2; 
+
+}
+
+
+
+.danger-enfant {
+
+	  background-color: #f4f69a; 
+
+}
+
+
+
+.danger-auteur {
+
+	  background-color: #8cf4e6; 
+
+}
+
+
+#formulaire hr {
+
+	  width: 100%;
+
+	  margin: 5px 0 2px 0; 
+
+}
+
+
+
+#formulaire .help {
+
+	  display: inline;
+
+	  float: right;
+
+	  margin-right: 5px;
+
+	  border: 1px red solid; 
+
+}
+
+
+
+#formulaire table {
+
+	  width: auto;
+
+	  margin-top: 4px;
+	  margin-bottom: 4px;
+
+	  margin-left: auto;
+
+	  margin-right: auto;
+
+	  border: none; 
+
+}
+
+
+
+#formulaire td {
+
+	  padding-left:3px; 
+
+}
+
+
+
+#formulaire td.libelle {
+
+	  border-left: none;
+
+	  color: gray;
+
+	  text-align: right;
+
+	  padding-right: 5px;
+
+	  font-weight: bold; 
+
+}
+
+
+
+#formulaire table {
+
+	  border-collapse: collapse;
+
+	  padding:5px; 
+
+}
+
+
+
+#formulaire tr {
+
+	  border: none; 
+
+}
+
+
+
+#formulaire td {
+
+	  border-right: 0px gray solid; 
+
+}
+
+
+
+.titre_box {
+
+	  display: block;
+
+	  width: 80%;
+
+	  margin-top: 0;
+
+	  margin-left: auto;
+
+	  margin-right: auto;
+
+	  text-align: center;
+
+	  border: 1px yellow solid; 
+
+}
+
+
+
+dl {
+
+	  margin-left: 0; 
+
+}
+
+
+
+dl dt {
+
+	  margin-left: 0;
+
+	  font-weight: bold;
+
+	  color: #293A74; 
+
+}
+
+
+
+dl dd {
+
+	  margin-left: 5px; 
+
+}
+
+.precision{
+    display:none;
+}
+
+.toolbar{
+	
+	display: block;
+
+	width: 60%;
+	height: 40px;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	border: 0; 
+}
+ div#print-footer {display: none;}
+
+textarea[disabled]
+{
+	font-family: arial, helvetica, sans-serif;
+    font-size: .9em;
+	font-weight: bold;
+	color: red;
+	
+}
+#popupFax{
+	display:none;
+	position: absolute;
+	-moz-border-radius: 10px;
+	border:2px solid #336699;
+	top : 20px;
+	left : 600px;
+	/* width:230px; */
+	height:200px;
+	background-color: #AACCEE;
+	text-align:center;
+	
+	}
+	
+	
+ #popupFax h1{
+		 font-size: 1.3em;
+	}
+	
+	
+	
+	.postit{
+	display:none;
+	position: absolute;
+	-moz-border-radius: 10px;
+	-moz-box-shadow: 6px 6px 10px #aaa;
+	-moz-transform: rotate(1deg);  
+	border:2px solid #336699;
+	top : 20px;
+	/* width:230px; */
+	height:300px;
+	background-color: #FFFF9C;
+	font-family: verdana, arial, sans-serif;
+	font-size: 1em;
+	line-height: 1em;
+	
+	}
+	/* Affichage plus visible des case à cocher checked */
+	.cocheVerte{
+	outline:3px solid green;
+	}

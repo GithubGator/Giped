@@ -1,0 +1,308 @@
+	#main_pec table {
+	  border-collapse: collapse; 
+	  text-align:center;
+	   font-size: 1.1em;
+	}
+	
+	#main_pec table td {
+	  border: solid black 1px;
+	  padding:0 10px 0 10px;
+
+	  
+	}	  
+	#main_pec table th {
+	  background: #AACCEE;
+	  border: 1px solid #565248;
+	  color: #000; 
+	}
+	tr.pair {
+		background-color: #ECE9D8;
+	}
+
+	tr.impair {
+		background-color: #FFFFE1;
+	}
+	
+	
+	
+	#main_pec {
+	  margin: 100px 20px 0 20px;
+	  padding: 40px;
+	   -moz-border-radius: 10px 10px 0 0;
+	  border-radius: 10px 10px 0  0 ;
+	  background: #fff ; 
+	
+	}
+	
+	p#footer_pec {
+	  /* padding: 10px 20px;
+	  */
+
+	padding-top: 0;
+	  padding-bottom: 10px;
+	  margin: 0 20px 0 20px;
+	  clear: both;
+	  background: #AACCEE ;
+	 -moz-border-radius: 0 0 10px 10px;
+	  border-radius: 0 0 10px 10px ;
+	  border-top: 1px dotted #5F7A94;
+	  text-align: center; 
+	}
+	
+	.Critere{
+		padding: 4px;
+		width: 800px;
+		height: 32px;
+		border: 1px solid #565248;
+		border-radius: 6px  ;
+		margin-bottom : 2px;
+		/*background: #D9DC2C; vert ONED*/   /*jaune ONED*/
+		background: #FAD805;
+		/*background: #FFF28E;*/
+		background-repeat:no-repeat;
+		background-position:6px 10px;
+
+	}
+	.Critere p{
+		margin-left:60px;
+		font-family: "DejaVu Sans", "Times New Roman", Times, serif;
+		font-size: 1.1em;
+
+	}
+	
+	
+	.Ligne{
+		padding: 4px;
+		width: 800px;
+		height: 28px;
+		border: 1px solid #565248;
+		border-radius: 6px  ;
+		margin-bottom : 2px;
+		/*background: #D9DC2C; vert ONED   
+		background: #FAD805; jaune ONED*/
+		background: #FFF28E;
+		background-image:url(./images/fiche1.png);
+		background-repeat:no-repeat;
+		background-position:6px 10px;
+
+	}
+	.Ligne p{
+		margin-left:60px;
+		font-family: "DejaVu Sans", "Times New Roman", Times, serif;
+		font-size: 1.1em;
+
+	}
+	
+	.LigneVert{
+		padding: 4px;
+		width: 800px;
+		height: 28px;
+		border: 1px solid #565248;
+		border-radius: 6px  ;
+		margin-bottom : 2px;
+		/*background: #D9DC2C; vert ONED   
+		background: #FAD805; jaune ONED*/
+		background: #87c966;
+		background-image:url(./images/fiche1.png);
+		background-repeat:no-repeat;
+		background-position:6px 10px;
+
+	}
+	.LigneVert p{
+		margin-left:60px;
+		font-family: "DejaVu Sans", "Times New Roman", Times, serif;
+		font-size: 1.1em;
+
+	}
+	.cell0{
+		width:60px;
+		display: inline-block;
+		margin-left:40px;
+		margin-top:6px;
+	}
+	.cell1{
+		width:200px;
+		display: inline-block;
+		margin-left:30px;
+		margin-top: 6px;
+	}
+	.Resume{
+		padding: 4px;
+		width: 500px;
+		height: 200px;
+		  border: 1px solid #565248;
+		-moz-border-radius: 6px ;
+		border-radius: 6px  ;
+		/*background: #D9DC2C; vert ONED   
+		background: #FAD805; jaune ONED*/
+		background: #FFF28E;
+		background-image:url(./images/note4.png);
+		background-repeat:no-repeat;
+		background-position:6px 10px;
+
+	}
+	
+	.Note{
+		padding: 4px;
+		width: 500px;
+		height: 400px;
+		  border: 1px solid #565248;
+		-moz-border-radius: 6px ;
+		border-radius: 6px  ;
+		/*background: #D9DC2C; vert ONED   
+		background: #FAD805; jaune ONED*/
+		background: #FFF28E;
+		background-image:url(./images/note4.png);
+		background-repeat:no-repeat;
+		background-position:6px 10px;
+
+	}
+	.Note p{
+		margin-left:60px;
+		font-family: "DejaVu Sans", "Times New Roman", Times, serif;
+		font-size: 1.1em;
+
+	}
+	
+	.Resume p{
+		margin-left:60px;
+		font-family: "DejaVu Sans", "Times New Roman", Times, serif;
+		font-size: 1.1em;
+
+	}
+	
+	.thumbNote{
+		padding: 4px;
+		width: 500px;
+		height: 60px;
+		  border: 1px solid #565248;
+		-moz-border-radius: 6px ;
+		border-radius: 6px  ;
+		background: #ccc ;   
+		background-image:url(./images/note4.png);
+		background-repeat:no-repeat;
+		background-position:6px center;
+
+	}
+	
+	.thumbNote a{
+		display:block;
+		text-decoration: none;
+		width:100%;
+		height:100%;
+	}
+	.thumbNote p{
+		margin-left:60px;
+		font-family: "DejaVu Sans", "Times New Roman", Times, serif;
+		font-size: 1.1em;
+
+	}
+	
+	.thumbPDF{
+		display:block;
+		padding: 4px;
+		width: 500px;
+		height: 60px;
+		  border: 1px solid #565248;
+		-moz-border-radius: 6px ;
+		border-radius: 6px  ;
+		background: #87c966 ;   
+		background-image:url(./images/pdf4.png);
+		background-repeat:no-repeat;
+		background-position: 6px center;
+
+	}
+	
+	.thumbPDF a{
+		display:block;
+		text-decoration: none;
+		width:100%;
+		height:100%;
+	}
+	
+	.thumbPDF p{
+		margin-left:60px;
+		
+		font-family: "DejaVu Sans", "Times New Roman", Times, serif;
+		font-size: 1.1em;
+
+	}
+	
+	.thumbOoo{
+		padding: 4px;
+		width: 500px;
+		height: 60px;
+		  border: 1px solid #565248;
+		-moz-border-radius: 6px ;
+		border-radius: 6px  ;
+		background: #ccc ;   
+		background-image:url(./images/Ooo4.png);
+		background-repeat:no-repeat;
+		background-position: 6px center;
+
+	}
+	
+	.thumbExcel{
+		padding: 4px;
+		width: 500px;
+		height: 60px;
+		  border: 1px solid #565248;
+		-moz-border-radius: 6px ;
+		border-radius: 6px  ;
+		background: #ccc ;   
+		background-image:url(./images/excel4.png);
+		background-repeat:no-repeat;
+		background-position:6px center;
+
+	}
+	
+	.thumbExcel a{
+		display:block;
+		text-decoration: none;
+		width:100%;
+		height:100%;
+	}
+	.thumbExcel p{
+		margin-left:60px;
+		font-family: "DejaVu Sans", "Times New Roman", Times, serif;
+		font-size: 1.1em;
+
+	}
+	.thumbCsv{
+		padding: 4px;
+		width: 500px;
+		height: 60px;
+		  border: 1px solid #565248;
+		-moz-border-radius: 6px ;
+		border-radius: 6px  ;
+		background: #ccc ;   
+		background-image:url(./images/csv4.png);
+		background-repeat:no-repeat;
+		background-position:6px center;
+
+	}
+	
+	.thumbCsv a{
+		display:block;
+		text-decoration: none;
+		width:100%;
+		height:100%;
+	}
+	.thumbCsv p{
+		margin-left:60px;
+		font-family: "DejaVu Sans", "Times New Roman", Times, serif;
+		font-size: 1.1em;
+
+	}
+	
+	#logoONPE{
+		position:absolute;
+		top: 100px;
+		right: 100px;
+		width: 240px;
+		height: 152px;
+		background: #ccc ;   
+		background-image:url(./images/Logo_onpe_150.png);
+		background-size: contain;
+	}
+

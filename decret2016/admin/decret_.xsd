@@ -1,0 +1,1544 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DECRET">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="donnee">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ACCFAM"> <!--Accompagnement social ou médico-social en cours d'au moins un membre de la famille. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ACCMOD"> <!--L’accueil est-il modulable ? --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ALLOC"> <!--le ménage perçoit-il des allocations ou des pensions. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ANAIS"> <!--Année de naissance --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ANSA1"> <!--Année de naissance de l'adulte 1 --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ANSA2"> <!--Année de naissance de l'adulte 2 --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ANSMERE"> <!--Année de naissance de la mère --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ANSPERE"> <!--Année de naissance du père --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AUTRE"> <!--Le ménage dispose-t-il d'autres sources de revenus --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- OUI -->
+                    <xs:enumeration value="2" /><!-- NON -->
+                    <xs:enumeration value="9" /><!-- NE SAIT PAS -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AUTREDA"> <!--Si autre décision administrative de protection de l'enfance, préciser la décision --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AUTREDJ"> <!--Si autre décision judiciaire en  assistance éducative, préciser. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AUTREHEBER"> <!--Autre hébergement régulier du mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AUTRLIEUACC"> <!--Existence d'un autre lieu d'accueil régulier du mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AUTRLIEUAR"> <!--Le mineur a-t-il un autre lieu d'accueil régulier ? --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CODEV"> <!--Codification du type d'évènement --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Evaluation de l'information préoccupante donnant lieu à une entrée ou un maintien dans la protection de l'enfance -->
+                    <xs:enumeration value="2" /><!-- Signalement direct donnant lieu à une entrée ou à un maintien dans la protection de l'enfance -->
+                    <xs:enumeration value="3" /><!-- Saisie directe du juge des enfants -->
+                    <xs:enumeration value="4" /><!-- Mesure de protection de l'enfance -->
+                    <xs:enumeration value="5" /><!-- Renouvellement ou fin de l'intervention en protection de l'enfance -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="COMPOMENAG"> <!--Composition du ménage --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Mineur autonome -->
+                    <xs:enumeration value="2" /><!-- Parents vivant ensemble -->
+                    <xs:enumeration value="3" /><!-- Mineur vivant avec sa mère seule -->
+                    <xs:enumeration value="4" /><!-- Mineur vivant avec son père seul -->
+                    <xs:enumeration value="5" /><!-- Résidence alternée -->
+                    <xs:enumeration value="6" /><!-- Mineur vivant avec sa mère dans une famille recomposée -->
+                    <xs:enumeration value="7" /><!-- Mineur vivant avec son père dans une famille recomposée -->
+                    <xs:enumeration value="8" /><!-- Mineur vivant chez un autre membre de la famille -->
+                    <xs:enumeration value="9" /><!-- Mineur vivant chez un particulier -->
+                    <xs:enumeration value="10" /><!-- Autre -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CONDADD"> <!--Conduite addictive (alcool ou drogue) d'un ou des adultes ayant en charge le mineur dans le lieu de résidence principale. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui, avec prise en charge spécialisée connue -->
+                    <xs:enumeration value="3" /><!-- Oui, sans prise en charge connue -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CONDEDEV"> <!--Conditions de développement physique, intellectuel, affectif ou social gravement compromises ou en risque de l'être. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CONDEDUC"> <!--Conditions d'éducations gravement compromises ou en risque de l'être. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CONFL"> <!--Exposition du mineur à un conflit de couple. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CONTMERE"> <!--Quelle est la fréquence des contacts de la mère avec le mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Au moins une fois par semaine -->
+                    <xs:enumeration value="2" /><!-- Au moins une fois par mois -->
+                    <xs:enumeration value="3" /><!-- Au moins une fois tous les 6 mois -->
+                    <xs:enumeration value="4" /><!-- Au moins une fois par an -->
+                    <xs:enumeration value="5" /><!-- Aucun contact -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CONTPERE"> <!--Quelle est la fréquence des contacts du père avec le mineur ? --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Au moins une fois par semaine -->
+                    <xs:enumeration value="2" /><!-- Au moins une fois par mois -->
+                    <xs:enumeration value="3" /><!-- Au moins une fois tous les 6 mois -->
+                    <xs:enumeration value="4" /><!-- Au moins une fois par an -->
+                    <xs:enumeration value="5" /><!-- Aucun contact -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CSPA1"> <!--Catégorie socioprofessionnelle de l’adulte1 (selon la nomenclature INSEE) --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Agriculteurs exploitants -->
+                    <xs:enumeration value="2" /><!-- Artisans, commerçants et chefs d'entreprise -->
+                    <xs:enumeration value="3" /><!-- Cadres et professions intellectuelles supérieures -->
+                    <xs:enumeration value="4" /><!-- Professions intermédiaires -->
+                    <xs:enumeration value="5" /><!-- Employés -->
+                    <xs:enumeration value="6" /><!-- Ouvriers -->
+                    <xs:enumeration value="7" /><!-- Retraités -->
+                    <xs:enumeration value="8" /><!-- Autres personnes sans activité professionnelle -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CSPA2"> <!--Catégorie socioprofessionnelle de l’adulte2 (selon la nomenclature INSEE) --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Agriculteurs exploitants -->
+                    <xs:enumeration value="2" /><!-- Artisans, commerçants et chefs d'entreprise -->
+                    <xs:enumeration value="3" /><!-- Cadres et professions intellectuelles supérieures -->
+                    <xs:enumeration value="4" /><!-- Professions intermédiaires -->
+                    <xs:enumeration value="5" /><!-- Employés -->
+                    <xs:enumeration value="6" /><!-- Ouvriers -->
+                    <xs:enumeration value="7" /><!-- Retraités -->
+                    <xs:enumeration value="8" /><!-- Autres personnes sans activité professionnelle -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATAVIS"> <!--En cas d'ouverture directe d'une procédure auprès du juge des enfants : date d'avis d'ouverture de la procédure. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATDCMERE"> <!--Si décédée, mois et année du décès de la mère --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATDCPERE"> <!--Si décédé, mois et année du décès du père --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATDEBACC"> <!--Date de début d’intervention de décision administrative d'accueil provisoire --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATDEBAD"> <!--Date de début d’intervention --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATDEBINTER"> <!--Date de début d’intervention si décision judiciaire d'action éducative en milieu ouvert ou d'investigation --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATDEBPLAC"> <!--Date de début d’intervention --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATDECAP"> <!--Date de la décision relative à l'autorité parentale --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATDECMDPH"> <!--Si prise en charge spécifique, date de la décision de la commission des droits et de l'autonomie. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATDECMIN"> <!--Si décès du mineur, mois et année du décès --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATDECPE"> <!--Date de la décision de protection de l'enfance. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATEXDECMDPH"> <!--Si prise en charge spécifique, date d'exécution de la décision de la commission des droits et de l'autonomie. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATFINACC"> <!--Date de fin d’intervention  de la décision administrative d'accueil provisoire --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATFINAD"> <!--Date de fin d’intervention --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATFININTER"> <!--Date de fin d’intervention --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATFINPLAC"> <!--Date de fin d’intervention --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATIP"> <!--Date de réception de l'information préoccupante --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATJE"> <!--Date de la saisine directe du juge des enfants --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATSIGN"> <!--Date du signalement direct auprès du procureur de la république --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DATSIGNPROJ"> <!--Date de la signature du projet pour l'enfant --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DCMERE"> <!--Décès de la mère --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DCPERE"> <!--Décès du père --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DECAP"> <!--Décision relative à l’autorité parentale --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Décision du juge aux affaires familiales sur l'exercice de l'autorité parentale -->
+                    <xs:enumeration value="2" /><!-- Délégation de l'autorité parentale -->
+                    <xs:enumeration value="3" /><!-- Retrait -->
+                    <xs:enumeration value="4" /><!-- Tutelle -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DECISION"> <!--Nature de la décision de protection de l'enfance --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Décision administrative en protection de l'enfance -->
+                    <xs:enumeration value="2" /><!-- Décision judiciaire en assistance éducative -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DEFINTEL"> <!--Déficience intellectuelle ou mentale reconnue par la maison départementale des personnes handicapées d'un ou des adultes ayant en charge le mineur dans le lieu de résidence principal. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DIPLOME"> <!--Dernier diplôme obtenu par le mineur à la fin de l'intervention en protection de l'enfance --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Aucun diplôme -->
+                    <xs:enumeration value="2" /><!-- Brevet -->
+                    <xs:enumeration value="3" /><!-- CAP, BEP ou équivalent -->
+                    <xs:enumeration value="4" /><!-- Baccalauréat ou équivalent -->
+                    <xs:enumeration value="5" /><!-- Diplôme du supérieur -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EMPLA1"> <!--Situation face à l'emploi de l'adulte 1 --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="10" /><!-- Salarié contrat à durée indéterminée -->
+                    <xs:enumeration value="11" /><!-- A son compte ou aidant un membre de sa famille dans son travail -->
+                    <xs:enumeration value="12" /><!-- Contrat à durée déterminée, mission d'intérim, apprentissage, travail saisonnier -->
+                    <xs:enumeration value="13" /><!-- Stage de formation professionnelle, ou contrat d'aide à l'emploi -->
+                    <xs:enumeration value="20" /><!-- Au chomage -->
+                    <xs:enumeration value="30" /><!-- Elève, étudiant, stagiaire non rémunéré -->
+                    <xs:enumeration value="40" /><!-- Militaire du contingent -->
+                    <xs:enumeration value="50" /><!-- Autre situation : retraité, préretraité, femme au foyer, autre... -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EMPLA2"> <!--Situation face à l'emploi de l'adulte 2 --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="10" /><!-- Salarié contrat à durée indéterminée -->
+                    <xs:enumeration value="11" /><!-- A son compte ou aidant un membre de sa famille dans son travail -->
+                    <xs:enumeration value="12" /><!-- Contrat à durée déterminée, mission d'intérim, apprentissage, travail saisonnier -->
+                    <xs:enumeration value="13" /><!-- Stage de formation professionnelle, ou contrat d'aide à l'emploi -->
+                    <xs:enumeration value="20" /><!-- Au chomage -->
+                    <xs:enumeration value="30" /><!-- Elève, étudiant, stagiaire non rémunéré -->
+                    <xs:enumeration value="40" /><!-- Militaire du contingent -->
+                    <xs:enumeration value="50" /><!-- Autre situation : retraité, préretraité, femme au foyer, autre... -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ENQPENAL"> <!--Le cas échéant, préciser s'il y a une enquête pénale --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ETABSCOSPE"> <!--Le mineur est scolarisé en établissement spécialisé --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FINEVAL"> <!--Date de fin d’évaluation --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FREQSCO"> <!--Fréquentation de l’établissement scolaire --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non inscrit -->
+                    <xs:enumeration value="2" /><!-- Inscrit et fréquentation régulière -->
+                    <xs:enumeration value="3" /><!-- Inscrit et fréquentation irrégulière -->
+                    <xs:enumeration value="4" /><!-- Inscrit mais descolarisé -->
+                    <xs:enumeration value="5" /><!-- Inscrit mais en situation d'exclusion temporaire -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="HANDICAP"> <!--Prise en charge spécifique suite à une décision de la commission des droits et de l'autonomie rendue au nom de la Maison départementale des personnes handicapées. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="INSTITPLAC"> <!--Personne ou institution à qui le mineur est confié --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- A l'autre parent -->
+                    <xs:enumeration value="2" /><!-- A un autre membre de la famille ou à un tiers digne de confiance -->
+                    <xs:enumeration value="3" /><!-- A un service départemental d'aide sociale à l'enfance -->
+                    <xs:enumeration value="4" /><!-- A un service ou à un établissement habilité pour l'accueil de mineurs à la journée ou suivant toute autre modalité de prise en charge -->
+                    <xs:enumeration value="5" /><!-- A un service ou à un établissement sanitaire ou d'éducation, ordinaire ou spécialisé -->
+                    <xs:enumeration value="6" /><!-- Auprès d'un établissement recevant les personnes hospitalisées en raison de troubles mentaux -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="INTERANT"> <!--L’enfant a-t-il déjà bénéficié d’une intervention en protection de l’enfance ou en assistance éducative ? --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LIENA1"> <!--Lien de l’adulte1 avec le mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Père ou mère -->
+                    <xs:enumeration value="2" /><!-- Conjoint du père ou de la mère -->
+                    <xs:enumeration value="3" /><!-- Grand-père ou grand-mère -->
+                    <xs:enumeration value="4" /><!-- Frère, demi-frère, sœur ou demi-sœur  -->
+                    <xs:enumeration value="5" /><!-- Oncle ou tante -->
+                    <xs:enumeration value="6" /><!-- Autre membre de la famille -->
+                    <xs:enumeration value="7" /><!-- Autre particulier sans lien familial -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LIENA2"> <!--Lien de l’adulte2 avec le mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Père ou mère -->
+                    <xs:enumeration value="2" /><!-- Conjoint du père ou de la mère -->
+                    <xs:enumeration value="3" /><!-- Grand-père ou grand-mère -->
+                    <xs:enumeration value="4" /><!-- Frère, demi-frère, sœur ou demi-sœur  -->
+                    <xs:enumeration value="5" /><!-- Oncle ou tante -->
+                    <xs:enumeration value="6" /><!-- Autre membre de la famille -->
+                    <xs:enumeration value="7" /><!-- Autre particulier sans lien familial -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LIENAUT1"> <!--Lien de la première personne à l'origine du mauvais traitement avec le mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="10" /><!-- Membre de la famille vivant avec le mineur -->
+                    <xs:enumeration value="20" /><!-- Autre personne vivant avec le mineur -->
+                    <xs:enumeration value="30" /><!-- Membre du lieu de prise en charge en hébergement du mineur -->
+                    <xs:enumeration value="40" /><!-- Membre de la  famille ne vivant pas avec le mineur -->
+                    <xs:enumeration value="50" /><!-- Professionnel et assimilé ayant autorité sur le mineur -->
+                    <xs:enumeration value="60" /><!-- Autre personne connue du mineur -->
+                    <xs:enumeration value="70" /><!-- Autre personne inconnue du mineur -->
+                    <xs:enumeration value="80" /><!-- Personne ne vivant pas avec le mineur sans distinction supplémentaire -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LIENAUT2"> <!--Lien de la seconde personne à l'origine du mauvais traitement avec le mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="10" /><!-- Membre de la famille vivant avec le mineur -->
+                    <xs:enumeration value="20" /><!-- Autre personne vivant avec le mineur -->
+                    <xs:enumeration value="30" /><!-- Membre du lieu de prise en charge en hébergement du mineur -->
+                    <xs:enumeration value="40" /><!-- Membre de la  famille ne vivant pas avec le mineur -->
+                    <xs:enumeration value="50" /><!-- Professionnel et assimilé ayant autorité sur le mineur -->
+                    <xs:enumeration value="60" /><!-- Autre personne connue du mineur -->
+                    <xs:enumeration value="70" /><!-- Autre personne inconnue du mineur -->
+                    <xs:enumeration value="80" /><!-- Personne ne vivant pas avec le mineur sans distinction supplémentaire -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LIEUACC"> <!--principal lieu d'accueil dans le cas d’une décision  administrative d’accueil --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Assistant familial -->
+                    <xs:enumeration value="2" /><!-- Etablissement -->
+                    <xs:enumeration value="3" /><!-- Pouponnière -->
+                    <xs:enumeration value="4" /><!-- Accueil mère-enfant -->
+                    <xs:enumeration value="5" /><!-- Chez un particulier -->
+                    <xs:enumeration value="6" /><!-- Hébergement autonome -->
+                    <xs:enumeration value="7" /><!-- Parrainage -->
+                    <xs:enumeration value="8" /><!-- Village d'enfant -->
+                    <xs:enumeration value="9" /><!-- Lieu de vie -->
+                    <xs:enumeration value="10" /><!-- Etablissement médico-social -->
+                    <xs:enumeration value="11" /><!-- Accueil de jour -->
+                    <xs:enumeration value="12" /><!-- Accueil avec hébergement chez les parents (service d'accueil progressif en milieu naturel) -->
+                    <xs:enumeration value="13" /><!-- Accueil en internat "ordinaire" -->
+                    <xs:enumeration value="14" /><!-- Autre -->
+                    <xs:enumeration value="15" /><!-- Intervention décidée mais non mise en oeuvre -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LIEUPLAC"> <!--Principal lieu de placement du mineur si décision judiciaire de placement --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Assistant familial -->
+                    <xs:enumeration value="2" /><!-- Etablissement -->
+                    <xs:enumeration value="3" /><!-- Pouponnière -->
+                    <xs:enumeration value="4" /><!-- Accueil mère-enfant -->
+                    <xs:enumeration value="5" /><!-- Chez un particulier -->
+                    <xs:enumeration value="6" /><!-- Hébergement autonome -->
+                    <xs:enumeration value="7" /><!-- Parrainage -->
+                    <xs:enumeration value="8" /><!-- Village d'enfant -->
+                    <xs:enumeration value="9" /><!-- Lieu de vie -->
+                    <xs:enumeration value="10" /><!-- Etablissement médico-social -->
+                    <xs:enumeration value="11" /><!-- Accueil de jour -->
+                    <xs:enumeration value="12" /><!-- Accueil avec hébergement chez les parents  -->
+                    <xs:enumeration value="13" /><!-- Accueil en internat "ordinaire" (internat scolaire, foyer de jeunes travailleurs, centre de formation des apprentis, etc.) -->
+                    <xs:enumeration value="14" /><!-- Hébergement collectif  traditionnel -->
+                    <xs:enumeration value="15" /><!-- Hébergement collectif en centre de placement immédiat -->
+                    <xs:enumeration value="16" /><!-- Hébergement collectif -->
+                    <xs:enumeration value="17" /><!-- Hébergement individualisé de la protection judiciaire de la jeunesse -->
+                    <xs:enumeration value="18" /><!-- Famille d'accueil de la protection judiciaire de la jeunesse -->
+                    <xs:enumeration value="19" /><!-- Autre -->
+                    <xs:enumeration value="20" /><!-- Intervention décidée mais non mise en oeuvre -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MEREINC"> <!--Mère inconnue --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MESANT"> <!--Existence d'une prestation ou d'une mesure de protection de l'enfance en cours ou antérieure pour un membre de la fratrie --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MINAUT1"> <!--La 1ère personne à l’origine du mauvais traitement est-elle mineure ? --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Mineur -->
+                    <xs:enumeration value="2" /><!-- Majeur -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MINAUT2"> <!--La 2d personne à l’origine du mauvais traitement est-elle mineure ? --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Mineur -->
+                    <xs:enumeration value="2" /><!-- Majeur -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MINIMA"> <!--Le ménage bénéficie-t-il de minimas sociaux --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MNAIS"> <!--Mois de naissance --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MODACC"> <!--Mode d'accueil pour les mineurs de moins de 6 ans --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Gardé par un des parents au domicile -->
+                    <xs:enumeration value="2" /><!-- Gardé par un autre adulte au domicile -->
+                    <xs:enumeration value="3" /><!-- Accueilli en crêche -->
+                    <xs:enumeration value="4" /><!-- Accueilli par une assistante maternelle -->
+                    <xs:enumeration value="5" /><!-- Accueilli par un membre de la famille -->
+                    <xs:enumeration value="6" /><!-- Autre mode de garde -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MORALITE"> <!--Moralité du mineur en danger ou en risque de danger --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MOTFININT"> <!--Motif de fin d'intervention en protection de l'enfance --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Mesure ou prestation arrivée à échéance -->
+                    <xs:enumeration value="2" /><!-- Mainlevée -->
+                    <xs:enumeration value="3" /><!-- Transfert du dossier dans un autre département avec maintien de la mesure -->
+                    <xs:enumeration value="9" /><!-- Motif non connu -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MOTIFML"> <!--Motif de la main levée --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="10" /><!-- Absence de motif de protection de l'enfance justifiant la mesure, ou absence de danger ou risque de danger -->
+                    <xs:enumeration value="11" /><!-- Impossibilité d'exercer la mesure -->
+                    <xs:enumeration value="12" /><!-- Déménagement annoncé de la famille dans un autre département avec arrêt de la mesure -->
+                    <xs:enumeration value="13" /><!-- Déménagement sans laisser d'adresse -->
+                    <xs:enumeration value="14" /><!-- Adoption -->
+                    <xs:enumeration value="15" /><!-- Majorité -->
+                    <xs:enumeration value="16" /><!-- Emancipation -->
+                    <xs:enumeration value="17" /><!-- Mesure jeune majeur -->
+                    <xs:enumeration value="18" /><!-- Décès du mineur -->
+                    <xs:enumeration value="19" /><!-- Autre -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MOTIFSIG"> <!--En cas de signalement judiciaire après évaluation, motif du signalement judiciaire. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- L'action ou les actions mises en oeuvre précédemment n'ont pas permis de remédier à la situation -->
+                    <xs:enumeration value="2" /><!-- Refus explicite ou implicite de la famille d'accepter l'intervention proposée -->
+                    <xs:enumeration value="3" /><!-- Impossibilité de colaboration avec la famille -->
+                    <xs:enumeration value="4" /><!-- Impossibilité d'évaluer cette situation -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NATDECASSED"> <!--Si décision judiciaire en assistance  éducative, nature de la décision judiciaire. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="10" /><!-- Non-lieu du juge des enfants -->
+                    <xs:enumeration value="11" /><!-- Mesure d'expertise -->
+                    <xs:enumeration value="12" /><!-- Enquête sociale -->
+                    <xs:enumeration value="13" /><!-- Investigation d'orientation éducative -->
+                    <xs:enumeration value="14" /><!-- Mesure judiciaire d'investigation éducative -->
+                    <xs:enumeration value="15" /><!-- Assistance éducative en milieu ouvert -->
+                    <xs:enumeration value="16" /><!-- Assistance éducative en milieu ouvert avec hébergement -->
+                    <xs:enumeration value="17" /><!-- Décision judiciaire de placement à l'aide sociale à l'enfance -->
+                    <xs:enumeration value="18" /><!-- Placement direct -->
+                    <xs:enumeration value="19" /><!-- Mesure judiciaire d'aide à la gestion du budget familial -->
+                    <xs:enumeration value="20" /><!-- Sursis à statuer -->
+                    <xs:enumeration value="21" /><!-- Autre mesure d'assistance éducative, à préciser -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NATDECPLAC"> <!--Si décision judiciaire de placement, nature de la décision. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Ordonnance de placement provisoire du juge des enfants -->
+                    <xs:enumeration value="2" /><!-- Jugement du juge des enfants -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NATNOUVDECPE"> <!--Si nouvelle décision en protection de l'enfance, nature de la décision. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Décision administrative et prise en charge par l'aide sociale à l'enfance -->
+                    <xs:enumeration value="2" /><!-- Décision judiciaire et prise en charge par l'aide sociale à l'enfance -->
+                    <xs:enumeration value="3" /><!-- Décision judiciaire et prise en charge par la protection judiciaire de la jeunesse -->
+                    <xs:enumeration value="4" /><!-- Nouvelle mesure de protection sans distinction supplémentaire -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NATPDECADM"> <!--Si décision administrative, nature de la décision administrative en  protection de l’enfance --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="10" /><!-- Aide à domicile, hors aides financières -->
+                    <xs:enumeration value="11" /><!-- Accueil de jour -->
+                    <xs:enumeration value="12" /><!-- Accueil 72 heures -->
+                    <xs:enumeration value="13" /><!-- Accueil 5 jours -->
+                    <xs:enumeration value="14" /><!-- Accueil provisoire du mineur -->
+                    <xs:enumeration value="15" /><!-- Pupille de l'Etat -->
+                    <xs:enumeration value="16" /><!-- Accueil parent-enfant (moins de 3 ans) -->
+                    <xs:enumeration value="17" /><!-- Contrat responsabilité parentale -->
+                    <xs:enumeration value="18" /><!-- Autre décision administrative, à préciser -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NBFRAT"> <!--Nombre de frères et sœurs (inclus demi-frères et demi-sœurs) --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NBPER"> <!--Nombre de personnes dans le lieu de résidence (y compris l’enfant lui-même) --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NEGLIG"> <!--Négligences lourdes envers le mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NIVSCO"> <!--Si le mineur est scolarisé en droit commun, préciser le niveau selon la nomenclature de l'éducation nationale. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="200" /><!-- Ecole maternelle -->
+                    <xs:enumeration value="310" /><!-- CP -->
+                    <xs:enumeration value="320" /><!-- CE1 -->
+                    <xs:enumeration value="330" /><!-- CE2 -->
+                    <xs:enumeration value="340" /><!-- CM1 -->
+                    <xs:enumeration value="350" /><!-- CM2 -->
+                    <xs:enumeration value="360" /><!-- Autre, dont scolarisation élémentaire spécifique -->
+                    <xs:enumeration value="399" /><!-- Ecole élémentaire sans distinction supplémentaire -->
+                    <xs:enumeration value="410" /><!-- 6ème -->
+                    <xs:enumeration value="420" /><!-- 5ème -->
+                    <xs:enumeration value="430" /><!-- 4ème -->
+                    <xs:enumeration value="440" /><!-- 3ème -->
+                    <xs:enumeration value="450" /><!-- Autre, dont scolarisation spécifique au collège -->
+                    <xs:enumeration value="499" /><!-- Collège, sans distinction supplémentaire -->
+                    <xs:enumeration value="510" /><!-- Seconde générale et technologique -->
+                    <xs:enumeration value="520" /><!-- Première générale -->
+                    <xs:enumeration value="530" /><!-- Première technologique -->
+                    <xs:enumeration value="540" /><!-- Première d'adaptation -->
+                    <xs:enumeration value="550" /><!-- Terminale générale -->
+                    <xs:enumeration value="560" /><!-- Terminale technologique -->
+                    <xs:enumeration value="570" /><!-- Autre, dont scolarisation spécifique au lycée -->
+                    <xs:enumeration value="599" /><!-- Lycée d'enseignement général et technologique, sans distinction supplémentaire -->
+                    <xs:enumeration value="610" /><!-- CAP -->
+                    <xs:enumeration value="620" /><!-- BEP -->
+                    <xs:enumeration value="630" /><!-- Bac professionnel -->
+                    <xs:enumeration value="640" /><!-- Autre, dont scolarisation spécifique au lycée professionnel -->
+                    <xs:enumeration value="699" /><!-- Lycée professionnel, sans distinction supplémentaire -->
+                    <xs:enumeration value="710" /><!-- CAP en apprentissage -->
+                    <xs:enumeration value="720" /><!-- BEP en apprentissage -->
+                    <xs:enumeration value="730" /><!-- Brevet professionnel -->
+                    <xs:enumeration value="740" /><!-- Bac professionnel en apprentissage -->
+                    <xs:enumeration value="750" /><!-- Autre, dont scolarisation spécifique -->
+                    <xs:enumeration value="769" /><!-- Apprentissage sans distinction supplémentaire -->
+                    <xs:enumeration value="770" /><!-- Etudes supérieures -->
+                    <xs:enumeration value="999" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NONSCO"> <!--Si le mineur est non scolarisé, préciser la situation --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="981" /><!-- Non scolarisé, sans formation, insertion ou activité professionnelle -->
+                    <xs:enumeration value="982" /><!-- Non scolarisé et dispositif de formation ou d'insertion ou activité professionnelle, dont stage -->
+                    <xs:enumeration value="990" /><!-- Autre (instruit à domicile, CNED, etc.) -->
+                    <xs:enumeration value="999" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NOTIFEVAL"> <!--Date de notification de la demande d’évaluation --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NOUVDECPE"> <!--Si mesure ou prestation arrivée à échéance, nouvelle décision de protection de l'enfance. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NUMANONYM"> <!--Identifiant de l’enfant --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9a-fA-F]{80}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NUMANONYMPREC"> <!--Identifiant de l’enfant de l’enfant lors de l’envoi précédent --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:pattern value="[0-9a-fA-F]{80}" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NUMDEPT"> <!--N° du département émetteur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="01" /><!-- AIN -->
+                    <xs:enumeration value="02" /><!-- AISNE -->
+                    <xs:enumeration value="03" /><!-- ALLIER -->
+                    <xs:enumeration value="04" /><!-- ALPES DE HAUTE PROVENCE -->
+                    <xs:enumeration value="05" /><!-- HAUTES-ALPES -->
+                    <xs:enumeration value="06" /><!-- ALPES MARITIMES -->
+                    <xs:enumeration value="07" /><!-- ARDECHE -->
+                    <xs:enumeration value="08" /><!-- ARDENNES -->
+                    <xs:enumeration value="09" /><!-- ARIEGE -->
+                    <xs:enumeration value="10" /><!-- AUBE -->
+                    <xs:enumeration value="11" /><!-- AUDE -->
+                    <xs:enumeration value="12" /><!-- AVEYRON -->
+                    <xs:enumeration value="13" /><!-- BOUCHES-DU-RHONE -->
+                    <xs:enumeration value="14" /><!-- CALVADOS -->
+                    <xs:enumeration value="15" /><!-- CANTAL -->
+                    <xs:enumeration value="16" /><!-- CHARENTE -->
+                    <xs:enumeration value="17" /><!-- CHARENTE-MARITIME -->
+                    <xs:enumeration value="18" /><!-- CHER -->
+                    <xs:enumeration value="19" /><!-- CORREZE -->
+                    <xs:enumeration value="21" /><!-- COTE-D'OR -->
+                    <xs:enumeration value="22" /><!-- COTES D'ARMOR -->
+                    <xs:enumeration value="23" /><!-- CREUSE -->
+                    <xs:enumeration value="24" /><!-- DORDOGNE -->
+                    <xs:enumeration value="25" /><!-- DOUBS -->
+                    <xs:enumeration value="26" /><!-- DROME -->
+                    <xs:enumeration value="27" /><!-- EURE -->
+                    <xs:enumeration value="28" /><!-- EURE-ET-LOIR -->
+                    <xs:enumeration value="29" /><!-- FINISTERE -->
+                    <xs:enumeration value="2A" /><!-- CORSE (SUD) -->
+                    <xs:enumeration value="2B" /><!-- CORSE (HAUTE) -->
+                    <xs:enumeration value="30" /><!-- GARD -->
+                    <xs:enumeration value="31" /><!-- HAUTE-GARONNE -->
+                    <xs:enumeration value="32" /><!-- GERS -->
+                    <xs:enumeration value="33" /><!-- GIRONDE -->
+                    <xs:enumeration value="34" /><!-- HERAULT -->
+                    <xs:enumeration value="35" /><!-- ILLE-ET-VILAINE -->
+                    <xs:enumeration value="36" /><!-- INDRE -->
+                    <xs:enumeration value="37" /><!-- INDRE-ET-LOIRE -->
+                    <xs:enumeration value="38" /><!-- ISERE -->
+                    <xs:enumeration value="39" /><!-- JURA -->
+                    <xs:enumeration value="40" /><!-- LANDES -->
+                    <xs:enumeration value="41" /><!-- LOIR-ET-CHER -->
+                    <xs:enumeration value="42" /><!-- LOIRE -->
+                    <xs:enumeration value="43" /><!-- HAUTE-LOIRE -->
+                    <xs:enumeration value="44" /><!-- LOIRE-ATLANTIQUE -->
+                    <xs:enumeration value="45" /><!-- LOIRET -->
+                    <xs:enumeration value="46" /><!-- LOT -->
+                    <xs:enumeration value="47" /><!-- LOT-ET-GARONNE -->
+                    <xs:enumeration value="48" /><!-- LOZERE -->
+                    <xs:enumeration value="49" /><!-- MAINE et LOIRE -->
+                    <xs:enumeration value="50" /><!-- MANCHE -->
+                    <xs:enumeration value="51" /><!-- MARNE -->
+                    <xs:enumeration value="52" /><!-- HAUTE-MARNE -->
+                    <xs:enumeration value="53" /><!-- MAYENNE -->
+                    <xs:enumeration value="54" /><!-- MEURTHE-ET-MOSELLE -->
+                    <xs:enumeration value="55" /><!-- MEUSE -->
+                    <xs:enumeration value="56" /><!-- MORBIHAN -->
+                    <xs:enumeration value="57" /><!-- MOSELLE -->
+                    <xs:enumeration value="58" /><!-- NIEVRE -->
+                    <xs:enumeration value="59" /><!-- NORD -->
+                    <xs:enumeration value="60" /><!-- OISE -->
+                    <xs:enumeration value="61" /><!-- ORNE -->
+                    <xs:enumeration value="62" /><!-- PAS-DE-CALAIS -->
+                    <xs:enumeration value="63" /><!-- PUY-DE-DOME -->
+                    <xs:enumeration value="64" /><!-- PYRENNES-ATLANTIQUES -->
+                    <xs:enumeration value="65" /><!-- HAUTES-PYRENNES -->
+                    <xs:enumeration value="66" /><!-- PYRENNES-ORIENTALES -->
+                    <xs:enumeration value="67" /><!-- BAS-RHIN -->
+                    <xs:enumeration value="68" /><!-- HAUT-RHIN -->
+                    <xs:enumeration value="69" /><!-- RHONE -->
+                    <xs:enumeration value="70" /><!-- HAUTE-SAONE -->
+                    <xs:enumeration value="71" /><!-- SAONE-ET-LOIRE -->
+                    <xs:enumeration value="72" /><!-- SARTHE -->
+                    <xs:enumeration value="73" /><!-- SAVOIE -->
+                    <xs:enumeration value="74" /><!-- HAUTE-SAVOIE -->
+                    <xs:enumeration value="75" /><!-- PARIS -->
+                    <xs:enumeration value="76" /><!-- SEINE-MARITIME -->
+                    <xs:enumeration value="77" /><!-- SEINE-ET-MARNE -->
+                    <xs:enumeration value="78" /><!-- YVELINES -->
+                    <xs:enumeration value="79" /><!-- DEUX SEVRES -->
+                    <xs:enumeration value="80" /><!-- SOMME -->
+                    <xs:enumeration value="81" /><!-- TARN -->
+                    <xs:enumeration value="82" /><!-- TARN-ET-GARONNE -->
+                    <xs:enumeration value="83" /><!-- VAR -->
+                    <xs:enumeration value="84" /><!-- VAUCLUSE -->
+                    <xs:enumeration value="85" /><!-- VENDEE -->
+                    <xs:enumeration value="86" /><!-- VIENNE -->
+                    <xs:enumeration value="87" /><!-- HAUTE-VIENNE -->
+                    <xs:enumeration value="88" /><!-- VOSGES -->
+                    <xs:enumeration value="89" /><!-- YONNE -->
+                    <xs:enumeration value="90" /><!-- TERRITOIRE DE BELFORT -->
+                    <xs:enumeration value="91" /><!-- ESSONNE -->
+                    <xs:enumeration value="92" /><!-- HAUTS-DE-SEINE -->
+                    <xs:enumeration value="93" /><!-- SEINE-SAINT-DENIS -->
+                    <xs:enumeration value="94" /><!-- VAL-DE-MARNE -->
+                    <xs:enumeration value="95" /><!-- VAL-D'OISE -->
+                    <xs:enumeration value="971" /><!-- GUADELOUPE -->
+                    <xs:enumeration value="972" /><!-- MARTINIQUE -->
+                    <xs:enumeration value="973" /><!-- GUYANE -->
+                    <xs:enumeration value="974" /><!-- REUNION -->
+                    <xs:enumeration value="975" /><!-- ST PIERRE et MIQUELON -->
+                    <xs:enumeration value="976" /><!-- MAYOTTE -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ORIGIP"> <!--Qualité de la personne à l’origine de l’information préoccupante ou du signalement direct --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="10" /><!-- Le mineur lui-même -->
+                    <xs:enumeration value="20" /><!-- Parents du mineur -->
+                    <xs:enumeration value="31" /><!-- Personnel social -->
+                    <xs:enumeration value="32" /><!-- Personnel de santé -->
+                    <xs:enumeration value="33" /><!-- Elu -->
+                    <xs:enumeration value="34" /><!-- Autre intervenant institutionnel -->
+                    <xs:enumeration value="40" /><!-- Autre particulier -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PEREINC"> <!--Père inconnu --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PLACMOD"> <!--Si décision judiciaire de placement, l’accueil est-il modulable ? --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PROJET"> <!--Existence d'un projet pour l'enfant ? --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RESMENAG"> <!--Ressources mensuelles du ménage --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- 0-999 euros -->
+                    <xs:enumeration value="2" /><!-- 1000-1999 euros -->
+                    <xs:enumeration value="3" /><!-- 2000-2999 euros -->
+                    <xs:enumeration value="4" /><!-- 3000 et plus -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="REVTRAV"> <!--Revenus du travail --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SAISJUR"> <!--Le cas échéant, préciser s'il y a une saisine de la juridiction pénale --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SANTE"> <!--Santé du mineur en danger ou en risque de danger --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SCOCLASPE"> <!--Le mineur est scolarisé en classe spécialisée --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SCODTCOM"> <!--Le mineur est scolarisé en droit commun --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SECURITE"> <!--Sécurité du mineur en danger ou en risque de danger --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SEXA1"> <!--Sexe de l’adulte1 --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Homme -->
+                    <xs:enumeration value="2" /><!-- Femme -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SEXA2"> <!--Sexe de l’adulte2 --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Homme -->
+                    <xs:enumeration value="2" /><!-- Femme -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SEXAUT1"> <!--Sexe de la 1ère personne à l'origine du mauvais traitement --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Masculin -->
+                    <xs:enumeration value="2" /><!-- Féminin -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SEXAUT2"> <!--Sexe de la 2d personne à l’origine du mauvais traitement. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Masculin -->
+                    <xs:enumeration value="2" /><!-- Féminin -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SEXE"> <!--Sexe de l’enfant --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Garçon -->
+                    <xs:enumeration value="2" /><!-- Fille -->
+                    <xs:enumeration value="9" /><!-- Non connu à ce jour -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SIGNMIN"> <!--Signature du projet pour l'enfant par le mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SIGNPAR"> <!--Signature du projet pour l'enfant par les parents --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SITAPML"> <!--Situation du mineur après la main levée. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Retour en milieu familial -->
+                    <xs:enumeration value="2" /><!-- Autonomie -->
+                    <xs:enumeration value="3" /><!-- Incarcération -->
+                    <xs:enumeration value="4" /><!-- Autre type d'intervention -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SOUTSOC"> <!--Manque de soutien social et/ou familial, isolement. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="STATOCLOG"> <!--Statut d'occupation du logement (selon la nomenclature INSEE) --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Propriétaire -->
+                    <xs:enumeration value="2" /><!-- Locataire, sous-locataire -->
+                    <xs:enumeration value="3" /><!-- Logé gratuitement -->
+                    <xs:enumeration value="4" /><!-- Fermier-métayer -->
+                    <xs:enumeration value="5" /><!-- Autre -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SUITEVAL"> <!--Suite donnée à l’évaluation --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Mise en place d'une mesure administrative de protection de l'enfance -->
+                    <xs:enumeration value="2" /><!-- Signalement judiciaire -->
+                    <xs:enumeration value="3" /><!-- Poursuite de la prise en charge en protection de l'enfance (administrative ou judiciaire) -->
+                    <xs:enumeration value="4" /><!-- Nouvelle décision en protection de l'enfance -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SUITSIGJE"> <!--Saisine du juge des enfants suite au signalement direct auprès du procureur de la République --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SUITSIGNCG"> <!--Renvoi au conseil général pour compétence suite au signalement direct auprès du procureur de la République --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SUITSIGOPP"> <!--Ordonnance de placement provisoire suite au signalement direct auprès du procureur de la République --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SUITSIGSS"> <!--Sans suite du procureur de la République --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TITAP"> <!--Titulaire de l’autorité parentale --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="10" /><!-- Exercice conjoint, par les parents vivant ensemble -->
+                    <xs:enumeration value="20" /><!-- Exercice conjoint, par les parents vivant séparément -->
+                    <xs:enumeration value="30" /><!-- Exclusivement par le père -->
+                    <xs:enumeration value="40" /><!-- Exclusivement par la mère -->
+                    <xs:enumeration value="50" /><!-- Autre membre de la famille -->
+                    <xs:enumeration value="60" /><!-- Autre particulier sans lien familial -->
+                    <xs:enumeration value="70" /><!-- Président du conseil général -->
+                    <xs:enumeration value="80" /><!-- Préfet -->
+                    <xs:enumeration value="90" /><!-- Etablissement -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TRANSIP"> <!--Institution ou qualité de la personne ayant transmis l'information préoccupante à la cellule ou ayant saisi directement le procureur de la République ou le juge des enfants. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="100" /><!-- Le mineur lui-même -->
+                    <xs:enumeration value="200" /><!-- Parents du mineur -->
+                    <xs:enumeration value="300" /><!-- Autre membre de la famille -->
+                    <xs:enumeration value="400" /><!-- Autre particulier -->
+                    <xs:enumeration value="510" /><!-- Service national d'accueil téléphonique de l'enfance en danger -->
+                    <xs:enumeration value="520" /><!-- Conseil général -->
+                    <xs:enumeration value="530" /><!-- Service de milieu ouvert ou de placement -->
+                    <xs:enumeration value="541" /><!-- Etablissement d'enseignement public -->
+                    <xs:enumeration value="542" /><!-- Etablissement d'enseignement privé -->
+                    <xs:enumeration value="543" /><!-- Education nationale, sans distinction supplémentaire -->
+                    <xs:enumeration value="550" /><!-- Hopital -->
+                    <xs:enumeration value="560" /><!-- Médecine libérale -->
+                    <xs:enumeration value="570" /><!-- Autre institution sanitaire et sociale -->
+                    <xs:enumeration value="580" /><!-- Accueil extrascolaire du mineur -->
+                    <xs:enumeration value="590" /><!-- Autre service social et association -->
+                    <xs:enumeration value="600" /><!-- Police ou gendarmerie -->
+                    <xs:enumeration value="611" /><!-- Procureur de la république -->
+                    <xs:enumeration value="612" /><!-- Juge des enfants -->
+                    <xs:enumeration value="613" /><!-- Justice sans distinction supplémentaire -->
+                    <xs:enumeration value="620" /><!-- Mairie ou commune -->
+                    <xs:enumeration value="630" /><!-- Autre -->
+                    <xs:enumeration value="640" /><!-- Voie institutionnelle sans distinction supplémentaire -->
+                    <xs:enumeration value="999" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TYPCLASSPE"> <!--Si le mineur est scolarisé en classe spécialisé, préciser le type de classe --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Classe pour l'inclusion scolaire -->
+                    <xs:enumeration value="2" /><!-- Unité pédagogique d'intégration -->
+                    <xs:enumeration value="3" /><!-- Section d'enseignement général et professionnel adapté -->
+                    <xs:enumeration value="4" /><!-- Classe d'intégration -->
+                    <xs:enumeration value="5" /><!-- Autre classe spécialisée -->
+                    <xs:enumeration value="6" /><!-- Classe spécialisée sans distinction supplémentaire -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TYPDECJUD"> <!--Si décision judiciaire d’aide éducative en milieu ouvert (AEMO) ou d’investigation, type d’intervention mise en œuvre --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Enquête sociale -->
+                    <xs:enumeration value="2" /><!-- Investigation d'orientation éducative -->
+                    <xs:enumeration value="3" /><!-- Mesure judiciaire d'investigation éducative -->
+                    <xs:enumeration value="4" /><!-- Expertise -->
+                    <xs:enumeration value="5" /><!-- Assistance éducative en milieu ouvert  -->
+                    <xs:enumeration value="6" /><!-- Assistance éducative en milieu ouvert intensive ou renforcée -->
+                    <xs:enumeration value="7" /><!-- Assistance éducative en milieu ouvert avec hébergement périodique -->
+                    <xs:enumeration value="8" /><!-- Assistance éducative en milieu ouvert avec hébergement exceptionnel -->
+                    <xs:enumeration value="9" /><!-- Mesure judiciaire d'aide à la gestion du budget familial -->
+                    <xs:enumeration value="10" /><!-- Autre -->
+                    <xs:enumeration value="11" /><!-- Intervention décidée mais non mise en oeuvre -->
+                    <xs:enumeration value="99" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TYPETABSPE"> <!--Si le mineur est scolarisé en établissement spécialisé, préciser le type de classe --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="810" /><!-- Institut médico-pédagogique -->
+                    <xs:enumeration value="820" /><!-- Institut médico-professionnel -->
+                    <xs:enumeration value="830" /><!-- Institut médico-éducatif -->
+                    <xs:enumeration value="840" /><!-- Etablissement spécialisé de l'éducation nationale -->
+                    <xs:enumeration value="890" /><!-- Etablissement spécialisé sans distinction supplémentaire -->
+                    <xs:enumeration value="999" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TYPINTERDOM"> <!--Si décision administrative d’aide à domicile, type d’intervention --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Action d'un technicien de l'intervention sociale et familiale -->
+                    <xs:enumeration value="2" /><!-- Mesure d'action éducative à domicile -->
+                    <xs:enumeration value="3" /><!-- Mesure d'action éducative à domicile intensive ou renforcée -->
+                    <xs:enumeration value="4" /><!-- Mesure d'action éducative à domicile avec hébergement périodique -->
+                    <xs:enumeration value="5" /><!-- Mesure d'action éducative à domicile avec hébergement exceptionnel -->
+                    <xs:enumeration value="6" /><!-- Mesure d'accompagnement en économie sociale et familiale -->
+                    <xs:enumeration value="7" /><!-- Autre -->
+                    <xs:enumeration value="8" /><!-- Intervention décidée mais non mise en oeuvre -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TYPINTERV"> <!--Si autre type d'intervention après la main levée. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Prise en charge médicale ou médico-sociale avec orientation de la commission des droits et de l'autonomie -->
+                    <xs:enumeration value="2" /><!-- Prise en charge médicale ou médico-sociale sans orientation de la commission des droits et de l'autonomie -->
+                    <xs:enumeration value="3" /><!-- Mesure pénale de placement -->
+                    <xs:enumeration value="4" /><!-- Mesure pénale en milieu ouvert -->
+                    <xs:enumeration value="5" /><!-- Autre -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VIOLFAM"> <!--Exposition du mineur à un climat de violence au sein de la famille. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VIOLFAMPHYS"> <!--En cas de climat de violence au sein de la famille, existence de violences physiques. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VIOLPERS"> <!--En cas de climat de violence au sein de la famille, personnes les plus concernées par ces violences. --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Violences entre conjoints ou ex-conjoints -->
+                    <xs:enumeration value="2" /><!-- Violences au sein de la fratrie -->
+                    <xs:enumeration value="3" /><!-- Violences intergénérationnelles -->
+                    <xs:enumeration value="4" /><!-- Violences concernant d'autres personnes -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VIOLPHYS"> <!--Violences physiques envers le mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Procédure, ou enquète en cours -->
+                    <xs:enumeration value="3" /><!-- Oui, avec allégations du mineur ou d'un tiers -->
+                    <xs:enumeration value="4" /><!-- Oui, avec décision de justice -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VIOLPSY"> <!--Violences psychologiques envers le mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Oui -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VIOLSEX"> <!--Violences sexuelles envers le mineur --> 
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="1" /><!-- Non -->
+                    <xs:enumeration value="2" /><!-- Procédure, ou enquète en cours -->
+                    <xs:enumeration value="3" /><!-- Oui, avec allégations du mineur ou d'un tiers -->
+                    <xs:enumeration value="4" /><!-- Oui, avec décision de justice -->
+                    <xs:enumeration value="9" /><!-- Ne sait pas -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+           </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

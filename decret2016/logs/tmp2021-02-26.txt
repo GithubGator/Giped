@@ -1,0 +1,2 @@
+26-02-2021 09:35:19 : Execution deplacement :mv /home/imports_dept/cg56-DecretOlinpe_2018_20200717.xml /home/imports_dept/Backup/cg56-DecretOlinpe_2018_20200717.xml
+26-02-2021 09:40:40 : Execution deplacement :mv /home/imports_dept/cg56-DecretOlinpe_2019_20200722.xml /home/imports_dept/Backup/cg56-DecretOlinpe_2019_20200722.xml

@@ -1,0 +1,1 @@
+02-11-2020 10:21:02 : Execution deplacement :mv /home/imports_dept/cg31-ONED-031-20201027.XML /home/imports_dept/Backup/cg31-ONED-031-20201027.XML

@@ -1,0 +1,45 @@
+/* Barre de navigation pour les genres d'appel...
+*********************************************************************************/
+
+#navgenres {
+	  display: inline;
+	  float: right;
+	  margin-left: 8px;
+	  margin-top: -20px;
+	  width: 80%;
+	  border: 1px yellow solid; 
+}
+
+#navgenres ul {
+	  margin: 0 10px 0 0;
+	  list-style: none;
+	  vertical-align: middle; 
+	  border: 1px green solid; 
+}
+
+#navgenres li {
+	  float: left;
+	  padding-left: 13px;
+	  border: 1px gray solid; 
+}
+
+#navgenres li a {
+	  display: block;
+	  padding: 5px 5px 5px 28px;
+	  color: #000;
+	  background: transparent url(img/menu.png) no-repeat 6px center;
+	  text-decoration: none; 
+}
+
+#navgenres ul li a:hover {
+	  color: #fff;
+	  background: #336699 url(img/menuhover.png) no-repeat 6px center; 
+}
+
+#navAction, #navAdmin ul li a {
+	  background: transparent url(img/action.png) no-repeat 6px center; 
+}
+
+#navAction, #navAdmin ul li a:hover {
+	  background: #336699 url(img/actionhover.png) no-repeat 6px center; 
+}

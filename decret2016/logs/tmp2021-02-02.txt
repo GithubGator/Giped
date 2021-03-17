@@ -1,0 +1,1 @@
+02-02-2021 16:08:24 : Execution deplacement :mv /home/imports_dept/cg95-2018_ExportOned.xml /home/imports_dept/Backup/cg95-2018_ExportOned.xml
